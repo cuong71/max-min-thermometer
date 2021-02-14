@@ -14,9 +14,10 @@ basic.forever(function () {
     currenttemperature = input.temperature()
     if (currenttemperature < min) {
         min = currenttemperature
+        min = max
     }
     if (currenttemperature > max) {
-        max = currenttemperature
+        currenttemperature += 1
     }
     basic.pause(1000)
     basic.clearScreen()
